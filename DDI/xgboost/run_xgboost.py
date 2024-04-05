@@ -343,9 +343,9 @@ def evaluate_xgb(train, valid, test, num_workers, optuna_hpps):
     test_preds = bst.predict_proba(test[0])
 
 
-    threshold_tr = 0.5
-    threshold_v = 0.5
-    threshold_t = 0.5
+    threshold_tr = 0.0
+    threshold_v = 0.0
+    threshold_t = 0.0
 
     return bst, (train[1], train_preds, threshold_tr), (valid[1], valid_preds, threshold_v), (test[1], test_preds, threshold_t), calculate_fusion_scores(train[1], train_preds, threshold_tr), calculate_fusion_scores(valid[1], valid_preds, threshold_v), calculate_fusion_scores(test[1], test_preds, threshold_t)
 
