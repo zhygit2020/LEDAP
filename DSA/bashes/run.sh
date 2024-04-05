@@ -18,7 +18,7 @@ python -u ../xgboost/run_xgboost.py \
     --num_works 16 \
     --num_trials 4 \
     --llama_size $LLAMA_SIZE \
-    --negtive_sample "all" \
+    --negtive_sample "none" \
     --opt_dir "minimize" \
     --name_only \
 

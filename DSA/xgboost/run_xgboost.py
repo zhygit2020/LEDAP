@@ -270,7 +270,6 @@ def calculate_fusion_scores(y_true, y_scores, threshold=0.5):
 
 def evaluate_xgb(train, valid, num_workers, optuna_hpps):
     # create model instance
-
     bst = XGBRegressor(n_jobs=num_workers,booster='gbtree',eval_metric ='rmse',objective='reg:squarederror',tree_method = 'auto',seed=42,**optuna_hpps)
     # fit model
     unique_values, counts = np.unique(train[1], return_counts=True)
@@ -283,8 +282,8 @@ def evaluate_xgb(train, valid, num_workers, optuna_hpps):
     train_preds = bst.predict(train[0])
     valid_preds = bst.predict(valid[0])
 
-    threshold_tr = 0.5
-    threshold_v = 0.5
+    threshold_tr = 0.0
+    threshold_v = 0.0
 
     return bst, (train[1], train_preds, threshold_tr), (valid[1], valid_preds, threshold_v), calculate_fusion_scores(train[1], train_preds, threshold_tr), calculate_fusion_scores(valid[1], valid_preds, threshold_v)
 
