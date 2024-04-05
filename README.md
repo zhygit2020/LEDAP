@@ -6,7 +6,7 @@
 
 ## Graphical Abstract
 
-![image](./paper/materials/Graphical-abstract - xs.png) 
+![image](./paper/materials/Graphical-abstract.png) 
 
 
 
@@ -58,7 +58,7 @@
 
 ##### 1.2 Conduct bio-text preprocessing and feature transformation following the [Llama 2 Release](https://github.com/Meta-Llama/llama)
 
-##### 1.3 Place the representation data into the `.representaions/` imitating the examples. 
+##### 1.3 Place the representation data into the `./representaions/` imitating the examples. 
 
 __Note:__ the prepared texts and LLM-based representations used in this study were available on [Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link)
 
