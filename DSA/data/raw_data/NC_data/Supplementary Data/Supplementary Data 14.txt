@@ -1,0 +1,22 @@
+RepresentationNumber,MedDRA,nodrugsInMedDRA,noTotalCategoriesTested,pvalOneTailedWilcoxonSumRank,MedianThisCAT,MedianAllPairs,p.adjust
+1,Musculoskeletal and connective tissue disorders,57,26,0.000209518,0.019175,1.02743e-21,0.00302637111111111
+1,Reproductive system and breast disorders,61,26,6.1702e-14,0.0550265,1.02743e-21,4.01063e-12
+2,Vascular disorders,97,26,3.02231e-05,0.00423862,6.43406e-25,0.000523867066666667
+2,Respiratory, thoracic and mediastinal disorders,96,26,5.7304e-07,0.0122348,6.43406e-25,1.65544888888889e-05
+2,Cardiac disorders,58,26,1.10196e-19,0.0556055,6.43406e-25,2.552992e-17
+3,Respiratory, thoracic and mediastinal disorders,96,26,0.000441595,0.017383,0.00404205,0.00546736666666667
+4,Eye disorders,67,26,1.09782e-09,0.0359699,6.17935e-09,4.05626e-08
+4,Immune system disorders,42,26,0.000362663,0.0140096,6.17935e-09,0.004714619
+4,Skin and subcutaneous tissue disorders,119,26,2.01902e-17,0.0360007,6.17935e-09,1.74981733333333e-15
+5,Psychiatric disorders,88,26,1.55502e-05,0.0364693,0.0259029,0.000311004
+5,Nervous system disorders,136,26,4.22963e-06,0.0364058,0.0259029,9.99730727272727e-05
+6,Infections and infestations,84,26,6.16366e-05,1.15638e-11,9.23501e-66,0.00100159475
+6,Respiratory, thoracic and mediastinal disorders,96,26,0.000106474,1.52506e-28,9.23501e-66,0.00162842588235294
+7,Gastrointestinal disorders,116,26,2.70644e-05,1.46392e-21,3.17038e-82,0.000502624571428571
+8,Psychiatric disorders,88,26,1.96384e-19,0.0403106,8.42537e-20,2.552992e-17
+8,Nervous system disorders,136,26,8.07399e-12,0.0221005,8.42537e-20,4.1984748e-10
+9,Metabolism and nutrition disorders,60,26,2.8967e-10,0.0403644,1.2732e-07,1.25523666666667e-08
+9,Investigations,57,26,1.24808e-09,0.0565349,1.2732e-07,4.05626e-08
+9,Blood and lymphatic system disorders,43,26,3.3236e-06,0.0243567,1.2732e-07,8.64136e-05
+10,Vascular disorders,97,26,0.00027822,0.00638385,2.62462e-23,0.00380722105263158
+10,Blood and lymphatic system disorders,43,26,8.61092e-06,0.0305632,2.62462e-23,0.000186569933333333

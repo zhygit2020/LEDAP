@@ -1,0 +1,22 @@
+RepresentationNumber,MedDRA,nodrugsInMedDRA,noTotalCategoriesTested,pvalOneTailedWilcoxonSumRank,MedianThisCAT,MedianAllPairs,p.adjust
+1,Joint disorders,8,217,0.000845816,0.0539639,1.02743e-21,0.0483005452631579
+1,Endocrine disorders of gonadal function,4,217,0.000749526,0.0827851,1.02743e-21,0.0478373947058824
+1,Musculoskeletal and connective tissue disorders NEC,9,217,0.000823119,0.0487968,1.02743e-21,0.0483005452631579
+1,Vulvovaginal disorders (excl infections and inflammations),4,217,0.000595724,0.0919579,1.02743e-21,0.0430907026666667
+1,Breast disorders,12,217,0.000502574,0.0274053,1.02743e-21,0.038949485
+1,Menstrual cycle and uterine bleeding disorders,7,217,0.000161446,0.0792747,1.02743e-21,0.0193146275
+2,Arteriosclerosis, stenosis, vascular insufficiency and necrosis,20,217,0.000217613,0.0251368,6.43406e-25,0.021464555
+2,Cardiac arrhythmias,25,217,8.18334e-13,0.0741395,6.43406e-25,8.8789239e-10
+2,Decreased and nonspecific blood pressure disorders and shock,12,217,0.000117165,0.0503771,6.43406e-25,0.0193146275
+3,Skin and subcutaneous tissue infections and infestations,10,217,0.000354429,0.0262276,0.00404205,0.0295811896153846
+3,Musculoskeletal and connective tissue disorders NEC,9,217,0.000693971,0.0392637,0.00404205,0.0470599084375
+4,Administration site reactions,23,217,0.000132983,0.0500406,6.17935e-09,0.0193146275
+5,Movement disorders (incl parkinsonism),18,217,0.000330958,0.04089,0.0259029,0.0295811896153846
+7,Gastrointestinal signs and symptoms,25,217,1.67687e-05,0.0147259,3.17038e-82,0.004548509875
+8,Neuromuscular disorders,13,217,0.000178015,0.0465695,8.42537e-20,0.0193146275
+8,Neurological disorders NEC,55,217,1.02099e-08,0.0324405,8.42537e-20,5.53887075e-06
+9,Water, electrolyte and mineral investigations,4,217,0.00089097,0.079904,1.2732e-07,0.0483351225
+9,White blood cell disorders,10,217,0.000155847,0.0609397,1.2732e-07,0.0193146275
+9,Haematology investigations (incl blood groups),12,217,0.000118553,0.0473138,1.2732e-07,0.0193146275
+9,Renal disorders (excl nephropathies),9,217,0.000941196,0.0408497,1.2732e-07,0.04862846
+9,Electrolyte and fluid balance conditions,15,217,1.04325e-05,0.0485901,1.2732e-07,0.0037730875

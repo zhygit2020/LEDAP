@@ -1,0 +1,49 @@
+sideEffect	frequencyClass	CTphase
+headache	5	I
+rash	5	I
+myalgia	5	I
+asthenia	5	I
+constipation	5	I
+flatulence	5	I
+diarrhoea	4	I
+dermatitis contact	4	I
+vision blurred	4	II
+diarrhoea	5	II
+nausea	5	II
+vomiting	5	II
+asthenia	5	II
+upper respiratory tract infection	5	II
+sinusitis	4	II
+weight decreased	4	II
+back pain	5	II
+myalgia	4	II
+pain in extremity	4	II
+headache	5	II
+gait disturbance	5	II
+dizziness	4	II
+somnolence	5	II
+anxiety	4	II
+delusion	4	II
+dysuria	4	II
+pollakiuria	4	II
+epistaxis	4	II
+cough	5	II
+alopecia	4	II
+rash	5	II
+hair colour changes	4	II
+hyperhidrosis	4	II
+alopecia	4	III
+basal cell carcinoma	4	III
+decreased appetite	4	III
+epistaxis	4	III
+hair colour changes	5	III
+nausea	5	III
+pruritus	4	III
+rash erythematous	4	III
+rash macular	4	III
+rash maculo-papular	4	III
+rash papular	4	III
+skin lesion	4	III
+syncope	4	III
+vomiting	4	III
+weight decreased	4	III
