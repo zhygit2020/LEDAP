@@ -1,2 +1,0 @@
-,auc,tn,fp,fn,tp,acc,mcc,precision,recall,specificity,sensitivity,f1,prauc,av_prc,macro_f1,kappa,rmse,mae,pcc
-xgboost,0.812898198602002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.28467878020013354,0.0,0.0,0.0,1.072301168523436,0.8497373980099955,0.587162832045548

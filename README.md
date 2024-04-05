@@ -28,17 +28,14 @@
  |- DDA
     |- bashes
     |- data
-    |- pretrained
     |- rf
  |- DDI
     |- bashes
     |- data
-    |- pretrained
     |- xbgoost
  |- DSA
     |- bashes
     |- data
-    |- pretrained
     |- xbgoost
  |- paper
     |- materials

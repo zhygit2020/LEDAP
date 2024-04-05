@@ -1,2 +1,0 @@
-,auc,tn,fp,fn,tp,acc,mcc,precision,recall,specificity,sensitivity,f1,prauc,av_prc,macro_f1,kappa,rmse,mae,pcc
-randomforrest,1.0,610,1,0,611,0.9991816693944353,0.9983646759294875,0.9983660130718954,1.0,0.9983633387888707,1.0,0.9991823385118561,1.0,1.0,0.0,0.0,0.0,0.0,0.0
