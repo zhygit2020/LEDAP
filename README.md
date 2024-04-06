@@ -1,6 +1,6 @@
 # <u>L</u>LM-based Natural Language <u>E</u>ncoding Could be All Your Need for <u>D</u>rug Biomedical <u>A</u>ssociation <u>P</u>rediction
 
-##### Hanyu Zhang, Yuan Zhou, Zhichao Zhang, Huaicheng Sun, Ziqi Pan, Minjie Mou, Wei Zhang, Qing Ye, Tingjun Hou, Honglin Li, Chang-Yu Hsieh<sup> * </sup>, and Feng Zhu<sup> * </sup>
+##### Hanyu Zhang, Yuan Zhou, Zhichao Zhang, Huaicheng Sun, Ziqi Pan, Minjie Mou, Wei Zhang, Qing Ye, Tingjun Hou, Honglin Li, Chang-Yu Hsieh<sup> * </sup> and Feng Zhu<sup> * </sup>
 
 
 
