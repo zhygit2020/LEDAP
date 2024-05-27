@@ -20,5 +20,4 @@ python -u ../xgboost/run_xgboost.py \
     --llama_size $LLAMA_SIZE \
     --negtive_sample "all" \
     --opt_dir "maximize" \
-    --name_erased \
 

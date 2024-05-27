@@ -1,6 +1,6 @@
 # <u>L</u>LM-based Natural Language <u>E</u>ncoding Could be All Your Need for <u>D</u>rug Biomedical <u>A</u>ssociation <u>P</u>rediction
 
-##### Hanyu Zhang, Yuan Zhou, Zhichao Zhang, Huaicheng Sun, Ziqi Pan, Minjie Mou, Wei Zhang, Qing Ye, Tingjun Hou, Honglin Li, Chang-Yu Hsieh<sup> * </sup> and Feng Zhu<sup> * </sup>
+##### Hanyu Zhang, Yuan Zhou, Zhichao Zhang, Huaicheng Sun, Ziqi Pan, Minjie Mou, Wei Zhang, Qing Ye, Tingjun Hou, Honglin Li<sup> * </sup>, Chang-Yu Hsieh<sup> * </sup> and Feng Zhu<sup> * </sup>
 
 
 
@@ -13,7 +13,8 @@
 ## Dependencies
 
 - LEDAP should be deployed on Linux in python 3.8.
-- Main requirments: `python==3.8.8`, `pytorch==1.10.1`, `xgboost 2.0.3`, `scikit-learn==0.24.1`, `optuna 2.10.0`.
+- Main requirements: `python==3.8.8`, `pytorch==1.10.1`, `xgboost 2.0.3`, `scikit-learn==0.24.1`, `optuna 2.10.0`.
+- `requirements.txt` is provided for environment dependency installation by `pip install -r requirements.txt`.
 - To use GPU, please install the GPU version of  `pytorch`.
 
 
@@ -42,6 +43,7 @@
  |- representations
     |- llama_2-7b
  |- README.md
+ |- requirements.txt
  |- LICENSE
 ```
 
@@ -55,7 +57,7 @@
 
 ##### 1.2 Conduct bio-text preprocessing and feature transformation following the [Llama 2 Release](https://github.com/Meta-Llama/llama)
 
-##### 1.3 Place the representation data into the `./representaions/` imitating the examples. 
+##### 1.3 Place the representation data into the `./representaions/llama_2-7b/` imitating the examples. 
 
 __Note:__ the prepared texts and LLM-based representations used in this study were available on [Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link)
 

@@ -51,12 +51,7 @@ class FoldLoggerStream(StringIO):
             self.logger.log(self.level, output)
 
 def set_foldlogger(args, k):
-    if args.name_only:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/nameonly'))
-    elif args.name_erased:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/nameerased'))
-    else:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/fulldescription'))
+    log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/fulldescription'))
     log_path.mkdir(parents=True, exist_ok=True)
     log_handler = logging.FileHandler(log_path / f"fold{k}.log", mode="w")
     fold_logger = logging.getLogger(f"fold{k}")
@@ -94,15 +89,8 @@ def init_folddata(args, k):
     elif args.negtive_sample == 'all':
         pass
     # load embedding
-    if args.name_only:
-        compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Compound_'+args.optuna_log_path.split('_')[-1].lower()+'_nameonly')
-        diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Disease_'+args.optuna_log_path.split('_')[-1].lower()+'_nameonly')
-    elif args.name_erased:
-        compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Compound_'+args.optuna_log_path.split('_')[-1].lower()+'_nameerased')
-        diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Disease_'+args.optuna_log_path.split('_')[-1].lower()+'_nameerased')
-    else: 
-        compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Compound_'+args.optuna_log_path.split('_')[-1].lower())
-        diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Disease_'+args.optuna_log_path.split('_')[-1].lower())
+    compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Compound_'+args.optuna_log_path.split('_')[-1].lower())
+    diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Disease_'+args.optuna_log_path.split('_')[-1].lower())
 
     # train
     pool = multiprocessing.Pool(processes=args.num_works)
@@ -152,12 +140,7 @@ def init_folddata(args, k):
 def superIO(args, results, fold, optuna_hpps):
     print('saving results while saveflag activated...')
 
-    if args.name_only:
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/nameonly'))
-    elif args.name_erased:
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/nameerased'))
-    else: 
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/fulldescription'))
+    saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/fulldescription'))
     saveio_path.mkdir(parents=True, exist_ok=True)
 
     def save_model(args, fold, model, optuna_hpps):

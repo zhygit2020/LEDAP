@@ -20,5 +20,4 @@ python -u ../xgboost/run_xgboost.py \
     --llama_size $LLAMA_SIZE \
     --negtive_sample "none" \
     --opt_dir "minimize" \
-    --name_only \
 

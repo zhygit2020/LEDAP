@@ -20,5 +20,4 @@ python -u ../rf/run_rf.py \
     --llama_size $LLAMA_SIZE \
     --negtive_sample "all" \
     --opt_dir "maximize" \
-    --name_erased \
 

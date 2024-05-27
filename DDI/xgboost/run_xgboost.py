@@ -51,12 +51,7 @@ class FoldLoggerStream(StringIO):
             self.logger.log(self.level, output)
 
 def set_foldlogger(args, k):
-    if args.name_only:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/nameonly'))
-    elif args.name_erased:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/nameerased'))
-    else:
-        log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/fulldescription'))
+    log_path = Path(str(args.prj_path)+'/logs').joinpath(Path(str(args.optuna_log_path)+'/fulldescription'))
     log_path.mkdir(parents=True, exist_ok=True)
     log_handler = logging.FileHandler(log_path / f"fold{k}.log", mode="w")
     fold_logger = logging.getLogger(f"fold{k}")
@@ -95,65 +90,9 @@ def init_folddata(args, k):
             pass
 
         # load embedding
-        if args.name_only:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_sumgnn_drugbank'+'_nameonly')
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_sumgnn_drugbank'+'_nameonly')
-        elif args.name_erased:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_sumgnn_drugbank'+'_nameerased')
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_sumgnn_drugbank'+'_nameerased')
-        else:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_sumgnn_drugbank'
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_sumgnn_drugbank'
+        compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_sumgnn_drugbank'
+        diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_sumgnn_drugbank'
 
-        # train
-        pool = multiprocessing.Pool(processes=args.num_works)
-        train_src = pool.map(partial(load_and_process_seqfea,compoundfea_path),train_data['src_drug'])
-        train_tar = pool.map(partial(load_and_process_seqfea,diseasefea_path),train_data['tar_drug'])
-        pool.close()
-        pool.join()
-        train = np.concatenate([np.array(train_src,dtype=np.float32), np.array(train_tar,dtype=np.float32)], axis=1)
-        train_label = np.array(train_data['label'], dtype=np.int64)
-        # valid
-        pool = multiprocessing.Pool(processes=args.num_works)
-        valid_src = pool.map(partial(load_and_process_seqfea,compoundfea_path),valid_data['src_drug'])
-        valid_tar = pool.map(partial(load_and_process_seqfea,diseasefea_path),valid_data['tar_drug'])
-        pool.close()
-        pool.join()
-        valid = np.concatenate([np.array(valid_src,dtype=np.float32), np.array(valid_tar,dtype=np.float32)], axis=1)
-        valid_label = np.array(valid_data['label'], dtype=np.int64)
-        # test
-        pool = multiprocessing.Pool(processes=args.num_works)
-        test_src = pool.map(partial(load_and_process_seqfea,compoundfea_path),test_data['src_drug'])
-        test_tar = pool.map(partial(load_and_process_seqfea,diseasefea_path),test_data['tar_drug'])
-        pool.close()
-        pool.join()
-        test = np.concatenate([np.array(test_src,dtype=np.float32), np.array(test_tar,dtype=np.float32)], axis=1)
-        test_label = np.array(test_data['label'], dtype=np.int64)
-
-    elif args.optuna_log_path.split('_')[-1] == 'DDIMDL':
-        # load data
-        train_data = pd.read_csv(Path(str(args.label_path)) / str(f'fold{k}_'+args.optuna_log_path.split('_')[-1]) / 'train.csv')
-        valid_data = pd.read_csv(Path(str(args.label_path)) / str(f'fold{k}_'+args.optuna_log_path.split('_')[-1]) / 'dev.csv')
-        test_data = pd.read_csv(Path(str(args.label_path)) / str(f'fold{k}_'+args.optuna_log_path.split('_')[-1]) / 'test.csv')
-        print('data loaded')
-        if args.negtive_sample == 'equal':
-            pass # train_data = train_data[train_data['label'] == 0].sample(n=len(train_data[train_data['label'] != 0])).append(train_data[train_data['label'] != 0])
-        elif args.negtive_sample == 'none':
-            pass # train_data = train_data[train_data['label'] != 0]
-        elif args.negtive_sample == 'all':
-            pass
-
-        # load embedding
-        if args.name_only:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_ddimdl'+'_nameonly')
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_ddimdl'+'_nameonly')
-        elif args.name_erased:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_ddimdl'+'_nameerased')
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / str('Drug_ddimdl'+'_nameerased')
-        else:
-            compoundfea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_ddimdl'
-            diseasefea_path = Path(str(args.feature_path)+f'/llama_{args.llama_size}') / 'Drug_ddimdl'
-        
         # train
         pool = multiprocessing.Pool(processes=args.num_works)
         train_src = pool.map(partial(load_and_process_seqfea,compoundfea_path),train_data['src_drug'])
@@ -201,12 +140,7 @@ def init_folddata(args, k):
 def superIO(args, results, fold, optuna_hpps):
     print('saving results while saveflag activated...')
 
-    if args.name_only:
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/nameonly'))
-    elif args.name_erased:
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/nameerased'))
-    else: 
-        saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/fulldescription'))
+    saveio_path = Path(str(args.prj_path)+'/pretrained').joinpath(Path(str(args.pretrained_data_path)+'/fulldescription'))
     saveio_path.mkdir(parents=True, exist_ok=True)
 
     def save_model(args, fold, model, optuna_hpps):
