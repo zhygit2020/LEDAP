@@ -159,9 +159,9 @@ def superIO(args, results, fold, optuna_hpps):
     def save_logits(args, fold, results):
         logit_savepath = saveio_path / 'logit_data' / f'{fold}th_Fold'
         logit_savepath.mkdir(parents=True, exist_ok=True)
-        for etk in results[4][0]:
-            pd.DataFrame({'y_true_train_logits':results[4][0][etk][0], 'y_scores_train_logits':[str(i) for i in results[4][0][etk][1]], 'threshold_train_logits':np.array([results[4][0][etk][2] for i in range(len(results[4][0][etk][0]))])}).to_csv(logit_savepath / f'train_logits_of_{etk}_for_{fold}th_Fold.csv')
-            pd.DataFrame({'y_true_valid_logits':results[4][1][etk][0], 'y_scores_valid_logits':[str(i) for i in results[4][1][etk][1]], 'threshold_valid_logits':np.array([results[4][1][etk][2] for i in range(len(results[4][1][etk][0]))])}).to_csv(logit_savepath / f'valid_logits_of_{etk}_for_{fold}th_Fold.csv')
+        for etk in results[3][0]:
+            pd.DataFrame({'y_true_train_logits':results[3][0][etk][0], 'y_scores_train_logits':[str(i) for i in results[3][0][etk][1]], 'threshold_train_logits':np.array([results[3][0][etk][2] for i in range(len(results[3][0][etk][0]))])}).to_csv(logit_savepath / f'train_logits_of_{etk}_for_{fold}th_Fold.csv')
+            pd.DataFrame({'y_true_valid_logits':results[3][1][etk][0], 'y_scores_valid_logits':[str(i) for i in results[3][1][etk][1]], 'threshold_valid_logits':np.array([results[3][1][etk][2] for i in range(len(results[3][1][etk][0]))])}).to_csv(logit_savepath / f'valid_logits_of_{etk}_for_{fold}th_Fold.csv')
 
     # save best kth model
     save_model(args, fold, results[0][0], optuna_hpps)
