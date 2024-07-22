@@ -1,4 +1,4 @@
-# <u>L</u>LM-based Natural Language <u>E</u>ncoding Could be All Your Need for <u>D</u>rug Biomedical <u>A</u>ssociation <u>P</u>rediction
+# <u>L</u>arge Language Model-Based Natural Language <u>E</u>ncoding Could Be All You Need for <u>D</u>rug Biomedical <u>A</u>ssociation <u>P</u>rediction
 
 ##### Hanyu Zhang, Yuan Zhou, Zhichao Zhang, Huaicheng Sun, Ziqi Pan, Minjie Mou, Wei Zhang, Qing Ye, Tingjun Hou, Honglin Li<sup> * </sup>, Chang-Yu Hsieh<sup> * </sup> and Feng Zhu<sup> * </sup>
 
@@ -59,7 +59,7 @@
 
 ##### 1.3 Place the representation data into the `./representaions/llama_2-7b/` imitating the examples. 
 
-__Note:__ the prepared texts and LLM-based representations used in this study were available on [Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link)
+__Note:__ the prepared LLM-based representations used in this study were available on ~~[Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link)~~. ^ The associated account has been unexpectedly deactivated by Google, we are now working to fix the issue, PLEASE WAITING…. ^
 
 #### 2. Use LLM-based representations to analyze drug biomedical associations
 
@@ -77,5 +77,9 @@ sh run.sh	# Run the model for DBA prediction
 
 ## Citation and Disclaimer
 
-The manuscript is currently under peer review. Should you have any questions, please contact Dr. Zhang at hanyu_zhang@zju.edu.cn
+The manuscript is currently online ahead of print by *__Analytical Chemistry__*.
+
+DOI: [10.1021/acs.analchem.4c01793](https://doi.org/10.1021/acs.analchem.4c01793)
+
+Should you have any questions, please contact Dr. Zhang at hanyu_zhang@zju.edu.cn
 
