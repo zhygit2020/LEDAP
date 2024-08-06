@@ -79,7 +79,7 @@ sh run.sh	# Run the model for DBA prediction
 
 The manuscript is published by [*__Analytical Chemistry__*](https://doi.org/10.1021/acs.analchem.4c01793).
 
-Please cite: Zhang H, Zhou Y, Zhang Z, Sun H, Pan Z, Mou M, Zhang W, Ye Q, Hou T, Li H, Hsieh CY, Zhu F. Large Language Model-Based Natural Language Encoding Could Be All You Need for Drug Biomedical Association Prediction. Anal. Chem. 2024 Jul, 96(30),12395–12403
+Please cite: Zhang H, Zhou Y, Zhang Z, Sun H, Pan Z, Mou M, Zhang W, Ye Q, Hou T, Li H, Hsieh CY, Zhu F. Large Language Model-Based Natural Language Encoding Could Be All You Need for Drug Biomedical Association Prediction. *__Anal. Chem__*. 96(30), 12395–12403
 
 Should you have any questions, please contact Dr. Zhang at hanyu_zhang@zju.edu.cn
 
