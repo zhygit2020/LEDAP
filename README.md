@@ -59,7 +59,7 @@
 
 ##### 1.3 Place the representation data into the `./representaions/llama_2-7b/` imitating the examples. 
 
-__Note:__ the prepared LLM-based representations used in this study were available on ~~[Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link)~~. ^ The associated account has been unexpectedly deactivated by Google, we are now working to fix the issue, PLEASE WAITING…. ^
+__Note:__ the prepared LLM-based representations used in this study were available on ~~[Google Drive](https://drive.google.com/drive/folders/1Xym2iMiKDzOgwPUQRSrOcTdbri9eZG7u?usp=drive_link). ^ The associated account has been unexpectedly deactivated by Google, we are now working to fix the issue, PLEASE WAITING…. ^~~ [MEGA](https://mega.nz/file/bMggVRCQ#wMPL3Kd5ZiqC2K16Pj1ycJQM7YRLgavJr9rEEuJVywI).
 
 #### 2. Use LLM-based representations to analyze drug biomedical associations
 
@@ -77,9 +77,9 @@ sh run.sh	# Run the model for DBA prediction
 
 ## Citation and Disclaimer
 
-The manuscript is currently online ahead of print by *__Analytical Chemistry__*.
+The manuscript is published by [*__Analytical Chemistry__*](https://doi.org/10.1021/acs.analchem.4c01793).
 
-DOI: [10.1021/acs.analchem.4c01793](https://doi.org/10.1021/acs.analchem.4c01793)
+Please cite: Zhang H, Zhou Y, Zhang Z, Sun H, Pan Z, Mou M, Zhang W, Ye Q, Hou T, Li H, Hsieh CY, Zhu F. Large Language Model-Based Natural Language Encoding Could Be All You Need for Drug Biomedical Association Prediction. Anal. Chem. 2024 Jul, 96(30),12395–12403
 
 Should you have any questions, please contact Dr. Zhang at hanyu_zhang@zju.edu.cn
 
